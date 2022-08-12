@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etEmailVal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_et_login"
+        android:hint="Email"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/etPass"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_et_login"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@null"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:id="@+id/imgFpLogin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/parking"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvJudul"
+        />
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#036C95"
+        android:text="Prototype Parkir Mobil Menggunakan Sensor Kamera Dan RFID Berbasis Android"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailVal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

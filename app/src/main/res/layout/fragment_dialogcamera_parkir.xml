@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dialogfragmentCameraParkir">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KONDISI PARKIRAN SAAT INI"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="20dp"
+        />
+<!--        <WebView-->
+<!--        android:id="@+id/webView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp">-->
+
+<!--        </WebView>-->
+        <com.marcoscg.ipcamview.IPCamView
+            android:id="@+id/ip_cam_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            app:url="YOUR_STREAM_URL"
+            app:interval="1500"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/photo"
+            />
+
+        <Button
+            android:id="@+id/btnCancelDialogfragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#036C95"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+</FrameLayout>
