@@ -50,21 +50,23 @@ class dialogfragmentCameraParkir : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val webView = view.findViewById<WebView>(R.id.webView)
-//
-//        webView.webViewClient = WebViewClient()
-//        webView.settings.javaScriptEnabled = true
-//        // this will load the url of the website
-//        webView.loadUrl("http://192.168.106.207")
-//        // if you want to enable zoom feature
-////        webView.webViewClient = HelloWebViewClient()
-//        WebView.setWebContentsDebuggingEnabled(false)
-//        webView.settings.setSupportZoom(true)
-        val ipCamView: IPCamView = view.findViewById(R.id.ip_cam_view)
-        ipCamView.setUrl("http://192.168.228.207")
-        ipCamView.setInterval(1000) // In milliseconds, default 1000
+        val webView = view.findViewById<WebView>(R.id.webView)
 
-        ipCamView.start()
+        webView.webViewClient = WebViewClient()
+        webView.settings.javaScriptEnabled = true
+        // this will load the url of the website
+        webView.loadUrl("http://192.168.0.106")
+        // if you want to enable zoom feature
+//        webView.webViewClient = HelloWebViewClient()
+        WebView.setWebContentsDebuggingEnabled(true)
+        webView.settings.setSupportZoom(false)
+
+
+//        val ipCamView: IPCamView = view.findViewById(R.id.ip_cam_view)
+//        ipCamView.setUrl("192.168.0.106")
+//        ipCamView.setInterval(1000) // In milliseconds, default 1000
+//
+//        ipCamView.start()
 
         view.findViewById<Button>(R.id.btnCancelDialogfragment).setOnClickListener {
             dismiss()

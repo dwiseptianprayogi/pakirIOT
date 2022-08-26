@@ -81,12 +81,24 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/cvDataSensor"
         />
+
+    <Button
+        android:id="@+id/btnBookingHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button_login"
+        android:text="booking parkiran"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btnCameraParkirHome"
+        />
+
     <FrameLayout
         android:id="@+id/framlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnCameraParkirHome"
+        app:layout_constraintTop_toBottomOf="@+id/btnBookingHome"
         android:scrollbarStyle="insideInset"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:isScrollContainer="true"
@@ -131,17 +143,30 @@
                         android:gravity="center"
                         android:layout_margin="5dp"
                         />
-                    <ImageView
-                        android:id="@+id/imgParkitLahan1"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/parking"
-                        android:padding="10dp"
-                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgParkitLahan1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/parking"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:id="@+id/imgParkitLahan1TidakTersedia"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:padding="10dp"
+                            android:src="@drawable/noparking" />
+                    </RelativeLayout>
+
+
                     <TextView
+                        android:id="@+id/tvStatParkirLahan1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PARKIR TERSEDIA"
+                        android:text="PARKIR BOOKED"
                         android:textSize="10sp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
@@ -174,13 +199,25 @@
                         android:gravity="center"
                         android:layout_margin="5dp"
                         />
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/parking"
-                        android:padding="10dp"
-                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgParkitLahan2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/parking"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:id="@+id/imgParkitLahan2TidakTersedia"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:padding="10dp"
+                            android:src="@drawable/noparking" />
+                    </RelativeLayout>
                     <TextView
+                        android:id="@+id/tvStatParkirLahan2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="PARKIR TERSEDIA"
@@ -217,13 +254,25 @@
                         android:gravity="center"
                         android:layout_margin="5dp"
                         />
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/parking"
-                        android:padding="10dp"
-                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgParkitLahan3"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/parking"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:id="@+id/imgParkitLahan3TidakTersedia"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:padding="10dp"
+                            android:src="@drawable/noparking" />
+                    </RelativeLayout>
                     <TextView
+                        android:id="@+id/tvStatParkirLahan3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="PARKIR TERSEDIA"
@@ -268,13 +317,25 @@
                         android:gravity="center"
                         android:layout_margin="5dp"
                         />
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/parking"
-                        android:padding="10dp"
-                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgParkitLahan4"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/parking"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:id="@+id/imgParkitLahan4TidakTersedia"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:padding="10dp"
+                            android:src="@drawable/noparking" />
+                    </RelativeLayout>
                     <TextView
+                        android:id="@+id/tvStatParkirLahan4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="PARKIR TERSEDIA"
@@ -309,13 +370,25 @@
                         android:gravity="center"
                         android:layout_margin="5dp"
                         />
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/parking"
-                        android:padding="10dp"
-                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgParkitLahan5"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/parking"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:id="@+id/imgParkitLahan5TidakTersedia"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:padding="10dp"
+                            android:src="@drawable/noparking" />
+                    </RelativeLayout>
                     <TextView
+                        android:id="@+id/tvStatParkirLahan5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="PARKIR TERSEDIA"

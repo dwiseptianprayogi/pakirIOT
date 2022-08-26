@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:backgroundTint="#F3EFEF"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/imgParkirRiwayat"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/pakirtersedia" />
+        <TextView
+            android:id="@+id/tvWaktuRiwayatParkit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu: "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/imgParkirRiwayat"
+            />
+        <TextView
+            android:id="@+id/tvWaktuRiwayatParkitVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29/07/2022 10:11:12"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/tvWaktuRiwayatParkit"
+            />
+        <TextView
+            android:id="@+id/tvBiayaParkirRiwayatParkit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biaya Parkir: "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/imgParkirRiwayat"
+            android:layout_below="@+id/tvWaktuRiwayatParkit"
+            />
+        <TextView
+            android:id="@+id/tvBiayaParkirRiwayatParkitval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 5.000"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_below="@id/tvWaktuRiwayatParkit"
+            android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit"
+            />
+
+        <TextView
+            android:id="@+id/tvSaldoRiwayatParkit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBiayaParkirRiwayatParkit"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/imgParkirRiwayat"
+            android:gravity="center"
+            android:text="Sisa Saldo: "
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvSaldoRiwayatParkitval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 35.000"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_below="@id/tvBiayaParkirRiwayatParkit"
+            android:layout_toRightOf="@+id/tvSaldoRiwayatParkit"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+<!--<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="2dp"-->
+<!--    >-->
+<!--    <TableRow-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHistoryTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:text="No Data Time Avaliable"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHistoryPM2.5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="No Data Time Avaliable"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHistoryCO2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="No Data Status Avaliable"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHistoryStatus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3"-->
+<!--            android:text="No Data Status Avaliable"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+
+<!--    </TableRow>-->
+
+<!--</TableLayout>-->

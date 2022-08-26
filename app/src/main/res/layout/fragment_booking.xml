@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".bookingFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="BOOKING PARKIR"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBookingParkir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDialogFragment"
+            android:text="Pilih Lahan Parkir:"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerLahanParkir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBookingParkir"
+            android:entries="@array/Languages"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/datePicker1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerLahanParkir"
+            android:background="@drawable/bg_button_login"
+            android:layout_marginBottom="10dp"
+            android:text="pilih tanggal booking"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvJadwalBookingParkir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datePicker1"
+            android:layout_marginBottom="10dp"
+            android:text="Dibooking tanggal: "
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tvJadwalBookingParkirVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datePicker1"
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/tvJadwalBookingParkir"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJadwalBookingParkir"
+            android:background="@drawable/bg_et_login"
+            android:layout_marginBottom="10dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordDialogFragmentVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:hint="Masukan PIN"
+                android:inputType="textPassword"
+                android:background="@null"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSimpanDialogFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPasswordDialogFragment"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_button_login"
+            android:text="booking"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnCancelDialogFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPasswordDialogFragment"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_button_login"
+            android:text="cancel"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -21,12 +21,12 @@
             android:gravity="center"
             android:layout_margin="20dp"
         />
-<!--        <WebView-->
-<!--        android:id="@+id/webView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="200dp">-->
+        <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        </WebView>
 
-<!--        </WebView>-->
         <com.marcoscg.ipcamview.IPCamView
             android:id="@+id/ip_cam_view"
             android:layout_width="match_parent"

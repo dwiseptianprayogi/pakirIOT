@@ -25,688 +25,709 @@
         android:gravity="center"
         android:layout_margin="10dp"
         />
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
+
+        <FrameLayout
+            android:id="@+id/framlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat"
-            />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="29/07/2022 10:11:12"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit"
-                />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat"
-                android:layout_below="@+id/tvWaktuRiwayatParkit"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit"
-                />
+            app:layout_constraintTop_toBottomOf="@+id/tvHistoryFp"
+            >
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFAC3"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/DataSensorListHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_history_data"
+                    android:layout_marginTop="1dp"
+                    />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </FrameLayout>
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat"-->
+<!--            />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="29/07/2022 10:11:12"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 35.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit"
-                />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat2"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat2"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="29/07/2022 10:12:10"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit2"
-                />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat2"
-                android:layout_below="@+id/tvWaktuRiwayatParkit2"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit2"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit2"
-                />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 35.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat2"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat2"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="29/07/2022 10:12:10"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit2"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat2"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit2"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit2"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit2"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit2"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat2"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit2"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat2"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit2"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit2"
-                android:gravity="center"
-                android:text="Rp. 30.000"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat3"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat3"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit2"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit2"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Rp. 30.000"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat3"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat3"-->
+<!--                />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit3"
-                android:gravity="center"
-                android:text="29/07/2022 10:15:13"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat3"
-                android:layout_below="@+id/tvWaktuRiwayatParkit3"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit3"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit3"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit3"-->
+<!--                android:gravity="center"-->
+<!--                android:text="29/07/2022 10:15:13"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat3"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit3"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit3"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit3"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit3"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat3"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit3"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat3"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit3"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit3"
-                android:gravity="center"
-                android:text="Rp. 25.000"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat4"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit3"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit3"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Rp. 25.000"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat4"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
 
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat4"
-                android:gravity="center"
-                android:text="Waktu: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit4"
-                android:gravity="center"
-                android:text="29/07/2022 10:18:02"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat4"
-                android:layout_below="@+id/tvWaktuRiwayatParkit4"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit4"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit4"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="29/07/2022 10:18:02"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat4"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit4"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit4"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit4"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit4"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat4"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit4"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit4"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit4"
-                android:gravity="center"
-                android:text="Rp. 20.000"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat5"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat5"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit4"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Rp. 20.000"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir5"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat5"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat5"-->
+<!--                />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit5"
-                android:gravity="center"
-                android:text="29/07/2022 10:20:01"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat5"
-                android:layout_below="@+id/tvWaktuRiwayatParkit5"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit5"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit5"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit5"-->
+<!--                android:gravity="center"-->
+<!--                android:text="29/07/2022 10:20:01"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat5"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit5"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit5"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit5"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit5"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat5"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit5"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat5"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit5"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit5"
-                android:gravity="center"
-                android:text="Rp. 15.000"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat6"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat6"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="29/07/2022 10:21:22"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit6"
-                />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat6"
-                android:layout_below="@+id/tvWaktuRiwayatParkit6"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit6"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit6"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit5"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit5"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Rp. 15.000"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir6"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat6"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat6"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="29/07/2022 10:21:22"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit6"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat6"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit6"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit6"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit6"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit6"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat6"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 10.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit6"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit6"
-                />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvLahanParkir7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="10dp"
-        android:addStatesFromChildren="true"
-        android:layout_alignParentStart="true"
-        app:cardBackgroundColor="#F3EFEF"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/imgParkirRiwayat7"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pakirtersedia" />
-            <TextView
-                android:id="@+id/tvWaktuRiwayatParkit7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Waktu: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat7"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="29/07/2022 10:11:12"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit7"
-                />
-            <TextView
-                android:id="@+id/tvBiayaParkirRiwayatParkit7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biaya Parkir: "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat7"
-                android:layout_below="@+id/tvWaktuRiwayatParkit7"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 5.000"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvWaktuRiwayatParkit7"
-                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit7"
-                />
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit6"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat6"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 10.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit6"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit6"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cvLahanParkir7"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:addStatesFromChildren="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        app:cardBackgroundColor="#F3EFEF"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgParkirRiwayat7"-->
+<!--                android:layout_width="65dp"-->
+<!--                android:layout_height="65dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/pakirtersedia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvWaktuRiwayatParkit7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Waktu: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat7"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="29/07/2022 10:11:12"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/tvWaktuRiwayatParkit7"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvBiayaParkirRiwayatParkit7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Biaya Parkir: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat7"-->
+<!--                android:layout_below="@+id/tvWaktuRiwayatParkit7"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 5.000"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvWaktuRiwayatParkit7"-->
+<!--                android:layout_toRightOf="@+id/tvBiayaParkirRiwayatParkit7"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/tvSaldoRiwayatParkit7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBiayaParkirRiwayatParkit7"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/imgParkirRiwayat7"
-                android:gravity="center"
-                android:text="Sisa Saldo: "
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 0"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="5dp"
-                android:layout_below="@id/tvBiayaParkirRiwayatParkit7"
-                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit7"
-                />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+<!--            <TextView-->
+<!--                android:id="@+id/tvSaldoRiwayatParkit7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tvBiayaParkirRiwayatParkit7"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_toRightOf="@+id/imgParkirRiwayat7"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sisa Saldo: "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rp. 0"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_below="@id/tvBiayaParkirRiwayatParkit7"-->
+<!--                android:layout_toRightOf="@+id/tvSaldoRiwayatParkit7"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
 
     </LinearLayout>
 
